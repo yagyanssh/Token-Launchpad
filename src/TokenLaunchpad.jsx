@@ -1,3 +1,4 @@
+import { createMint } from '@solana/spl-token'
 export function TokenLaunchpad() {
 
     function createToken () {
@@ -7,12 +8,7 @@ export function TokenLaunchpad() {
         const imageUrl = document.getElementById("image").value;
         const initialSupply = document.getElementById("supply").value;
 
-        console.log({
-            name,
-            symbol,
-            imageUrl,
-            initialSupply
-        })
+        createMint();
     }
 
     return <div style={{
